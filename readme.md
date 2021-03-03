@@ -2,8 +2,10 @@
 
 
 ### To reproduce the results do the following steps
-    - Clone repository and install requirements.txt
-    - Set parameters in parameters.py for the required setting
+    - clone repository and install requirements.txt
+    - requires python3.x
+
+    - set parameters in parameters.py for the respective setting
     - run python3 main.py [PD,SH,CH,NPIPD]
     - run jupyter notebook 
     - See results in notebook Penalty-Games.ipynb
