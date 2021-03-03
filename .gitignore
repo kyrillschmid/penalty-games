@@ -45,3 +45,4 @@ nodeLanguageServer.*/**
 Pipfile
 Pipfile.lock
 penalty-games.code-workspace
+.vscode
