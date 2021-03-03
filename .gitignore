@@ -41,3 +41,7 @@ debugpy*.log
 pydevd*.log
 nodeLanguageServer/**
 nodeLanguageServer.*/**
+
+Pipfile
+Pipfile.lock
+penalty-games.code-workspace
