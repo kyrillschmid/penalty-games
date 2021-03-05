@@ -2,12 +2,15 @@
 
 
 ### To reproduce the results do the following steps
-    - clone repository
-    - requires python3.x, gym, dotmap, pandas, numpy
+    - Clone repository
+    - Requires python3.x, gym, dotmap, pandas, numpy, matplotlib
 
+#### Install requirements:
+    - To install via pip run: pip install -r requirements.txt 
+    - To install via pipenv: pipenv install
 
-
-    - set parameters in parameters.py for the respective setting
-    - run python3 main.py [PD,SH,CH,NPIPD]
-    - run jupyter notebook 
+#### Run experiments:
+    - Set parameters in parameters.py for the respective setting
+    - Run python3 main.py [PD, SH, CH, NPIPD]
+    - Run jupyter notebook 
     - See results in notebook Penalty-Games.ipynb
