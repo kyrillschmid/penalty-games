@@ -1,7 +1,8 @@
 ## Learning to Penalize Other Learning Agents
+A repository to reproduce the experiments from the Paper "Learning to Penalize Other Learning Agents"
 
 
-### To reproduce the results do the following steps
+#### To reproduce the results do the following steps
     - Clone repository
     - Requires python3.x, gym, dotmap, pandas, numpy, matplotlib
 

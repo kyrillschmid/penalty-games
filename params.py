@@ -16,7 +16,7 @@ def get_params():
     params.q_learning.epsilon_init = 1.0
     params.q_learning.epsilon_min = 0.0001
     params.q_learning.gamma = 0.9
-    params.q_learning.alpha = 0.2 # [SH=0.2, CH=-0.2, PD=0.2, NPIPD = 0.008]
+    params.q_learning.alpha = 0.008 # [SH=0.2, CH=-0.2, PD=0.2, NPIPD = 0.008]
 
     # N Player Prisoner's Dilemma 
     params.npipd.N = 64 # 32 # 64 # 128
