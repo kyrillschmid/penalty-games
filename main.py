@@ -55,7 +55,9 @@ def main(params):
 
 
     if params.log:
-        stats.to_csv(os.path.join('exps', env.name, '{}-player-{}-penalization-{}.csv'.format(env.N, env.name, params.penalization)))
+        output_path = os.path.join('exps', env.name)
+        stats.to_csv(os.path.join(output_path, '{}-player-{}-penalization-{}.csv'.format(env.N, env.name, params.penalization)))
+        save_params(params, output_path)
 
 
 def save_params(params, output_path):
