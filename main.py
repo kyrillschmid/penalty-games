@@ -11,12 +11,12 @@ import argparse
 def main(params):
     episodes = params.episodes
     stats = pd.DataFrame(columns=params.logging_columns)
-    
     step = 0
-    for run in range(params.nb_runs):    
+    for run in range(params.nb_runs):
+        print("Run {} from {} runs".format(run, params.nb_runs))
         env = make_social_dilemma(params)
         agents = []
-        for _ in range(env.N):
+        for _ in range(env.N):        
             agent = Agent(env, params)
             agents.append(agent)
 
@@ -58,6 +58,7 @@ def main(params):
         output_path = os.path.join('exps', env.name)
         stats.to_csv(os.path.join(output_path, '{}-player-{}-penalization-{}.csv'.format(env.N, env.name, params.penalization)))
         save_params(params, output_path)
+        print("Results saved in {}".format(output_path))
 
 
 def save_params(params, output_path):
@@ -66,17 +67,15 @@ def save_params(params, output_path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("env", metavar="ENV", type=str, help="{} or {}".format('PD', 'SH', 'CH', 'NPIPD'))
-    parser.add_argument("--eval", metavar="EVAL", type=str, help="{}".format('single'))
+    parser.add_argument("env", metavar="ENV", type=str, help="{} or {}".format('PD=Prisoner\'s Dilemma', 'SH=Stag Hunt', 'CH=Chicken', 'NPIPD=N-Player Prisoner\'s Dilemma'))
+    parser.add_argument("--nb_agents", metavar="NB_AGENTS", type=str, help="{}".format('single'))
     args = parser.parse_args()
     assert args.env in ['PD', 'SH', 'CH', 'NPIPD']
 
     params = get_params()
     params.env = args.env
-    if args.eval == 'single':
+    
+    for penalization in [True, False]:
+        params.penalization = penalization
         main(params)
-    else:
-        for penalization in [True, False]:
-            params.penalization = penalization
-            main(params)
-        
+    

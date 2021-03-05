@@ -98,7 +98,7 @@ class TwoPlayerSocialDilemma(SocialDilemma):
 class NPlayerPrisonersDilemma(SocialDilemma):
     def __init__(self, env, params):
         super(NPlayerPrisonersDilemma, self).__init__(env, params)
-        self.f = params.npipd.f
+        self.f = 2.0
         self.p = None
         self.N = params.npipd.N
         self.k = 0.0
