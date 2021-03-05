@@ -3,6 +3,8 @@ from dotmap import DotMap
 def get_params():
     params = DotMap()
 
+    # SH = Stag Hunt, CH = Chicken, PD = Prisoner's Dilemma, NPIPD = N-Player Prisoner's Dilemma
+
     # global
     params.nb_runs = 25
     params.episodes = 4000 

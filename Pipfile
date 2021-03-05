@@ -8,6 +8,8 @@ gym = "*"
 dotmap = "*"
 pandas = "*"
 numpy = "*"
+notebook = "*"
+seaborn = "*"
 
 [dev-packages]
 
