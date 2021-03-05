@@ -13,6 +13,7 @@ A repository to reproduce the experiments from the Paper "Learning to Penalize O
 
 #### Run experiments:
     - Set parameters in parameters.py for the respective setting
-    - Run python3 main.py [PD, SH, CH, NPIPD]
+    - Run python3 main.py |PD|SH|CH for two player social dilemmas
+    - Run python3 main.py NPIPD --nb_agents=|32|64|128| for N-Player Prisoner's dilemma
     - Run jupyter notebook 
     - To see results in notebook run: jupyter notebook Penalty-Games.ipynb

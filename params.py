@@ -21,23 +21,12 @@ def get_params():
     params.q_learning.gamma = 0.9
     
     # Two Player Social dilemmas
-    params.q_learning.alpha = 0.2
-    params.penalty = -2.0    
+    params.sd.q_learning.alpha = 0.2
+    params.sd.penalty = -2.0    
 
-    # NPIPD 32 Agents
-    params.npipd.N = 64
-    params.penalty = -70
-    params.q_learning.alpha = 0.008
-
-    # NPIPD 64 Agents
-    params.npipd.N = 64
-    params.penalty = -160
-    params.q_learning.alpha = 0.008
-
-    # NPIPD 128 Agents
-    params.npipd.N = 128
-    params.penalty = -300
-    params.q_learning.alpha = 0.008
+    # N-Player Prisoner's Dilemma
+    params.npipd.q_learning.alpha = 0.008
+    params.npipd.penalty = {"32": -70, "64": -160, "128": -300}
 
     return params
     
